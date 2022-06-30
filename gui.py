@@ -8,6 +8,10 @@ from temperature.gui import TemperatureModule
 from tv.gui import TVModule
 
 
+
+
+
+
 class MySmartHome(tk.Tk):
     def __init__(self):
         super().__init__()
