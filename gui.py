@@ -6,6 +6,7 @@ from lights.gui import  LightsModule
 from security.gui import SecurityModule
 from temperature.gui import TemperatureModule
 from tv.gui import TVModule
+from meteo.gui import MeteoModule
 
 class MySmartHome(tk.Tk):
     def __init__(self):
@@ -61,6 +62,10 @@ class MySmartHome(tk.Tk):
         self.temperature_frame = TemperatureModule(self,  background='Black')
         self.temperature_frame.grid(row=0, column=1)
         self.notebook.add(self.temperature_frame, text="Temperature")
+
+        self.meteo_frame = MeteoModule(self,  background='Black')
+        self.meteo_frame.grid(row=0, column=1)
+        self.notebook.add(self.meteo_frame, text="Meteo")
 
 
 root = MySmartHome()
