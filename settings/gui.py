@@ -1,6 +1,6 @@
 
 import tkinter as tk
-from tkinter import IntVar
+from tkinter import IntVar, StringVar
 from tkinter import ttk
 from tkinter.colorchooser import askcolor
 
@@ -9,10 +9,11 @@ class SettingsModule(tk.Frame):
     def __init__(self, master, *args, **kwargs):
         super().__init__(master, *args, **kwargs)
         self.font = ("Arial", 12)
-
+        
         self.create_test_label()
         self.create_color_button()
         self.create_time_check()
+        
 
     
     def create_test_label(self):
@@ -31,5 +32,6 @@ class SettingsModule(tk.Frame):
         self.test_label.grid(row=2, column=0)
 
     def change_color(self):
+        CheckColor =StringVar()
         self.colors = askcolor(title="Background Color Chooser")
         self.configure(bg=self.colors[1])
